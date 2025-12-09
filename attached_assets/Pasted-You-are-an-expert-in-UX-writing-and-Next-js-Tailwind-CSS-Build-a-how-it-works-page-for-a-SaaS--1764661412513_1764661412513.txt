@@ -1,0 +1,41 @@
+You are an expert in UX writing and Next.js + Tailwind CSS. Build a `/how-it-works` page for a SaaS product called "Current".
+
+Current = an AI-powered, self-updating knowledge base. It ingests Slack, Zoom, and docs, detects when documentation is out of date, and suggests AI-generated updates that users approve with one click.
+
+Page structure requirements:
+1) Hero section
+   - Headline: “How Current keeps your knowledge always up to date.”
+   - One-sentence explanation.
+   - A subtle link back to “Get started free”.
+
+2) 4-step visual flow
+   - A horizontal or vertical stepper with four clear steps:
+     Step 1: Connect your tools (Slack, Google Docs, Notion, Zoom).
+     Step 2: Current listens for changes (messages, meetings, edits).
+     Step 3: AI compares everything to your SOPs and knowledge base, detects drift, and generates diff-style suggestions.
+     Step 4: You approve updates with one click and your source of truth stays in sync.
+   - Each step should have:
+     - A step number
+     - A short title
+     - 2–3 lines of explanatory copy
+     - A small icon-like visual (Tailwind-styled divs, no external images required).
+
+3) Under-the-hood section
+   - A two-column section:
+     - Left: high-level explanation “What’s happening behind the scenes” in non-technical language: ingestion, embeddings, diffing, approvals.
+     - Right: a simple pseudo-diagram (stacked cards or boxes) labelled “Slack”, “Zoom”, “Docs”, “Current AI Engine”, “Knowledge Base”.
+   - This should feel reassuring, not overly technical.
+
+4) “Who it’s for” strip
+   - A row of 3–4 pill cards: Ops teams, Customer Success, RevOps, Agencies.
+   - Short copy under each describing what Current does for them.
+
+5) Final CTA
+   - Short line like “See Current keep your docs in sync in under 30 minutes.”
+   - Button: “Get started free”.
+
+Implementation:
+- Use Tailwind utility classes for layout and spacing.
+- Must be responsive on mobile (stacked sections).
+- Export a default React component for this page.
+- Tone: simple, confident, non-jargony but clearly AI-powered.

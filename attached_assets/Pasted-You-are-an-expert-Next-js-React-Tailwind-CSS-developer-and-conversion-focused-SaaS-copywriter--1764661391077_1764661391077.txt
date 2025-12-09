@@ -1,0 +1,39 @@
+You are an expert Next.js + React + Tailwind CSS developer and conversion-focused SaaS copywriter.
+
+Build a responsive `/product` page for a B2B SaaS called "Current". Current is a self-updating knowledge base that keeps SOPs and internal docs in sync with Slack, Zoom, and Google Docs using AI.
+
+Requirements:
+- Use a clean, modern, opinionated layout similar to Linear/Notion.
+- Use Tailwind classes for styling (no external UI libraries).
+- Structure the page into these sections:
+  1) Hero
+     - Headline: “Your knowledge base that updates itself.”
+     - Subheadline explaining that Current ingests Slack, Zoom, and docs, detects knowledge drift, and suggests AI-powered updates.
+     - Two buttons: “Get started free” (primary) and “Book a demo” (secondary).
+  2) Problem → Solution
+     - A two-column section.
+     - Left: the problem of knowledge rot: stale SOPs, outdated Notion/Confluence pages, real answers buried in Slack and meetings.
+     - Right: how Current continuously watches Slack/Zoom/docs and keeps a single source of truth updated.
+  3) Feature Cards
+     - A grid of feature cards with icons and copy.
+     - Features to include:
+       - Auto-updating docs
+       - Slack ingestion
+       - Zoom & meeting transcription
+       - Doc diffing and version history
+       - AI update suggestions & approvals
+       - Knowledge drift detection
+  4) Screenshot / UI Preview Section
+     - A faux “app preview” card showing a list of documents with status (Up to date / Needs review), and a diff panel with red/green changes.
+     - This can be a simple styled div; no real image needed.
+  5) Social Proof / Trust
+     - Placeholder logos and a small testimonial quote from an “Ops Lead” about saving hours per week keeping docs in sync.
+  6) Final CTA
+     - Restate the value.
+     - Buttons: “Get started free” and “Talk to us”.
+
+Implementation details:
+- Export a default React component for the page (e.g. `export default function ProductPage()`).
+- Use semantic HTML where possible (`<main>`, `<section>`, `<header>`, `<footer>`).
+- Keep copy clear, concise, and focused on mid-market ops / CS / RevOps buyers.
+- Assume this will be used in a Next.js app under `/app/product/page.tsx` or `/pages/product.tsx`, so just export the component, no routing logic.

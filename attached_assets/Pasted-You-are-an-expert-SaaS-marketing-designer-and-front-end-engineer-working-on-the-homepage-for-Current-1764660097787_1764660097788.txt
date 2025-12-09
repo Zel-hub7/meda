@@ -1,0 +1,250 @@
+You are an expert SaaS marketing designer and front-end engineer working on the homepage for Current — an AI self-updating knowledge base for internal company docs.
+
+The stack is React + Tailwind (assume Next.js-style components and modern best practices).
+Your job is to update the existing homepage to clearly communicate:
+
+The cost of out-of-date / hard-to-update knowledge bases
+
+The time, money, and morale lost today
+
+The ROI of Current in a simple, compelling way for mid-market buyers
+
+Brand & Audience
+
+Product name: Current
+
+Tagline concept: “Self-updating knowledge for fast-moving teams.”
+
+Target buyer: VP/Head of Operations, CS, RevOps, Enablement, or COO at mid-market SaaS or tech-enabled companies (100–1000 employees)
+
+Tone: sharp, confident, data-backed, no fluff. Think: “Notion + Vanta + Snowflake ROI slide.”
+
+1. Layout & Structure
+
+Update the homepage to include these sections, in this order (you can integrate into existing layout but keep this narrative):
+
+Hero (short, punchy, with 1–2 power stats)
+
+The Problem: Knowledge Bases Are Failing (data-backed)
+
+The Cost: Time, Money, Morale (simple, quantified)
+
+The ROI of Current (clear 15–60× ROI, with a mid-market example)
+
+Mini ROI Snapshot / Calculator CTA (invite them to “See your ROI”)
+
+Trust / Social Proof Placeholder (logos or quote area)
+
+Use Tailwind, modern spacing, and responsive design. Use cards, big numbers, and bold headings. Do not invent new statistics — only use the ones provided below (you may lightly round or simplify for readability, e.g., 5.2M → 5M).
+
+2. Copy & Stats to Use (Verbatim or Lightly Edited)
+
+Use this content as your source of truth:
+
+HERO
+
+Goal: Make the value obvious in 5 seconds.
+
+Main headline:
+Your knowledge base is bleeding you millions. Current stops the leak.
+
+Subheadline:
+Current automatically updates your SOPs, playbooks, and onboarding docs from Slack, meetings, and scattered files — so your team stops searching, stops guessing, and starts executing.
+
+1–2 stat callouts (small badges or pill components), for example:
+
+“Employees spend 20–30% of their week just searching for information.”
+
+“Mid-market teams lose $3M–$7M/year to out-of-date documentation.”
+
+Primary CTA: “Book a demo”
+
+Secondary CTA: “See your ROI in 60 seconds”
+
+SECTION 1: The Problem – Knowledge Bases Are Failing
+
+Add a section with a strong headline and 3–4 stat cards.
+
+Headline:
+“Your ‘source of truth’ is out of date by the end of the quarter.”
+
+Subcopy (short paragraph):
+Most companies treat documentation as a one-time project. Docs are written once, then forgotten. The result: stale SOPs, tribal knowledge in Slack, and teams who can’t trust what they read.
+
+Stats to surface as cards:
+
+80% of company knowledge is stale within 90 days.
+
+Employees spend 20–30% of their week searching for information.
+
+40% of knowledge walks out the door when someone leaves.
+
+67% of employees say outdated documentation directly causes mistakes.
+
+Visually, make these look like “Oh shit” stats: big number, small descriptor line, short explanation.
+
+SECTION 2: The Cost – Time, Money, Morale
+
+Goal: Show the economic pain clearly, especially for a 250-person company.
+
+Headline:
+“The status quo is costing you millions every year.”
+
+Subcopy:
+Even conservative assumptions show that out-of-date, hard-to-update knowledge bases quietly drain millions of dollars in productivity, rework, and morale every single year.
+
+Create a 3-column layout for Time, Money, Morale, and then a simple table for the mid-market example.
+
+Time / Productivity:
+
+Employees waste 8–12 hours per week searching for information and asking clarifying questions.
+
+For a 250-person company, that’s ~2,500 hours/week, or $100K/week at ~$40/hr fully loaded.
+
+That’s ~$5.2M/year in lost productivity.
+
+Money / Rework & Onboarding:
+
+Mistakes from outdated info and tribal knowledge cost $4,500 per incident on average.
+
+Mid-market orgs see 25–40 incidents/month → $112K–$180K/month in rework.
+
+Poor documentation slows ramp, increasing time-to-productivity by 30–60%.
+
+Each new hire loses $15K–$25K in slow ramp. At 20 hires/year, that’s $300K–$500K/year lost.
+
+Morale / Retention:
+
+34% of employees say poor documentation “severely impacts morale.”
+
+22% cite it as a reason for burnout or attrition.
+
+Replacing one burned-out employee costs $50K–$150K.
+
+Add a simple “Cost Snapshot” table like:
+
+“250 employees”
+
+“$5.2M/year in lost productivity”
+
+“$1M–$1.5M/year in rework & slow onboarding”
+
+“Silent tax on every project, every new hire, every customer.”
+
+SECTION 3: The ROI of Current
+
+Goal: Show 15–60× ROI with a clear, believable example.
+
+Headline:
+“Current pays for itself in days, not months.”
+
+Subcopy:
+Current turns your chaotic, stale documentation into a living system that updates itself from the tools your team already uses.
+
+Use the following value pillars, each with specific numbers:
+
+Cuts search time by 40–75%
+
+If employees waste 8–12 hours/week searching, Current gives back 5–9 hours/week.
+
+That’s 20–36 hours/month per employee — roughly 4–8% productivity improvement.
+
+For a 250-person team, that’s $2M–$4M/year in reclaimed productivity.
+
+Eliminates 60–90% of rework incidents
+
+Current keeps SOPs and playbooks up to date by automatically:
+
+ingesting Slack, meetings, and docs
+
+updating steps & screenshots
+
+surfacing changes and discrepancies.
+
+This can save $75K–$160K/month in rework and error costs.
+
+Accelerates onboarding by 30–50%
+
+New hires get a current, trustworthy single source of truth.
+
+At 20 hires/year, this saves $250K–$400K annually in ramp-time cost.
+
+Retains institutional knowledge
+
+Instead of losing 40% of knowledge when someone leaves, Current keeps it:
+
+Ingesting messages and meetings
+
+Updating docs automatically.
+
+This protects $300K–$800K/year in otherwise lost institutional memory.
+
+Replaces 2–4 FTEs of manual documentation work
+
+Today, PMs, Ops, CSMs, and engineers spend 5–10 hours/week maintaining docs.
+
+That’s $180K–$350K/year of low-leverage work that Current automates.
+
+Total ROI Summary Block (visually big):
+
+Current license (mid-market): ~$10K–$50K/year
+
+Estimated value delivered: $3M–$7M+/year
+
+ROI: 15×–60×
+
+Payback period: < 7 days
+
+Add a concise line:
+
+“Most customers recoup a full year of Current in the first week.”
+
+SECTION 4: Mini ROI Snapshot / Calculator CTA
+
+Add a slim section that teases an interactive calculator (even if it’s just a CTA for now).
+
+Headline:
+“See how much Current is worth to your team.”
+
+Subcopy:
+“Enter your headcount and we’ll show you how much time and money you’re losing to outdated documentation — and how quickly Current pays for itself.”
+
+Add a CTA button: “See your ROI in 60 seconds” (can scroll to a calculator section, open a modal, or just be a placeholder route).
+
+SECTION 5: Trust / Social Proof Placeholder
+
+Even if we don’t have real logos yet, design the layout so we can drop them in later.
+
+Headline: “Built for teams who can’t afford stale knowledge.”
+
+Subtext: “Logos or customer quotes will live here.”
+
+3. Implementation Details
+
+Use modern, clean Tailwind classes for layout: max-w-5xl, mx-auto, grid, gap-6, etc.
+
+Use cards with big numbers for stats (e.g., text-3xl font-semibold for numbers).
+
+Make sure the new content is:
+
+Responsive and mobile-friendly
+
+Accessible (semantic HTML, good contrast, proper heading hierarchy)
+
+Keep copy concise in the UI (you can slightly trim sentences to avoid walls of text), but preserve all key numbers and claims.
+
+4. Important Constraints
+
+Do not invent new statistics or ROI numbers beyond what’s provided.
+
+You can round for readability (e.g., $5.2M → $5M, “40–75%” → “up to 75%”) but don’t materially change the meaning.
+
+Keep the brand name Current and positioning as “self-updating internal knowledge base.”
+
+Now:
+
+Modify the existing homepage component(s) to incorporate these sections and copy.
+
+Return the updated React/Tailwind code for the homepage.
+
+Ensure the result feels like a polished, production-ready B2B SaaS landing page.

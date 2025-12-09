@@ -1,0 +1,11 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Lightning bolt icon only (no background) -->
+  <path 
+    d="M288 48L128 256H232L208 464L384 256H280L288 48Z" 
+    fill="#6366F1" 
+    stroke="#6366F1" 
+    stroke-width="20" 
+    stroke-linecap="round" 
+    stroke-linejoin="round"
+  />
+</svg>

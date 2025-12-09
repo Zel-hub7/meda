@@ -1,0 +1,180 @@
+4. Current vs. Slab
+
+Slab is simple, elegant, and commonly chosen by early-stage startups.
+
+Key angles:
+
+Still manual
+
+Still static
+
+No ingestion
+
+No Slack/Zoom sync
+
+No drift detection
+
+Very young companies look here.
+
+5. Current vs. Loom/Tango/Scribe
+
+These are “how-to creation tools,” not knowledge bases.
+
+Key angles:
+
+They help create content
+
+You help maintain it
+
+Videos get stale instantly
+
+Docs rot over time
+
+Buyers often misunderstand this — huge clarity boost.
+
+⭐️ INDIRECT COMPETITORS (these are GREAT to have)
+6. Current vs. Google Docs
+
+Most small teams literally store SOPs here.
+
+Key angles:
+
+Zero governance
+
+Impossible to keep current
+
+No approval workflow
+
+No drift detection
+
+This might convert 5–10 paying customers by itself.
+
+7. Current vs. Dropbox Paper / Quip
+
+Less common but still used by ops-heavy teams.
+
+Key angles:
+
+Lightweight
+
+Good for collaboration
+
+Bad for long-term documentation accuracy
+
+Not a must, but worth adding.
+
+8. Current vs. Helpjuice / Document360
+
+Popular KB tools, especially for customer support teams.
+
+Key angles:
+
+External KB focus
+
+Static docs
+
+Hard to keep updated
+
+No ingestion / no AI governance
+
+Good for CS/Support buyers.
+
+9. Current vs. Guru + Notion + Confluence combo
+
+This is a POWERFUL one.
+
+Many companies cobble together 2–3 tools.
+
+Your headline:
+
+“Replace 3 tools with one system that keeps itself updated.”
+
+⭐️ ADJACENT “MENTAL MODEL” COMPETITORS
+10. Current vs. Internal Wiki
+
+This is semantic but necessary.
+
+Buyers Google “wiki vs __” all the time.
+
+11. Current vs. Knowledge Base
+
+Same story — SEO powerhouse.
+
+12. Current vs. SOP Management Tools
+
+People specifically search for SOP tools.
+
+Your angle:
+
+You’re not just SOP management
+
+You’re a “self-updating source of truth”
+
+13. Current vs. AI Knowledge Tools (Glean, Neuron, etc.)
+
+This one is subtle.
+
+Key angles:
+
+Glean indexes search → but does NOT update docs
+
+You update the source of truth
+
+You're the actual canonical system
+
+High-value enterprise page.
+
+⭐️ PROBLEM-BASED COMPARISON PAGES
+
+These are the most underrated pages in SaaS and convert like crazy, especially to mid-market buyers.
+
+Each one frames the pain, not the product.
+
+14. Current vs. Manual Documentation
+
+(The biggest competitor: human effort)
+
+Headline:
+“You don’t need more documentation — you need documentation that stays accurate.”
+
+This hits hard.
+
+15. Current vs. Internal Tribal Knowledge
+
+Massive problem, especially in scaling teams.
+
+16. Current vs. Searching Slack
+
+Everyone does this.
+
+Your page basically writes itself:
+
+Slack is real-time
+
+Docs are static
+
+Current is the missing bridge
+
+17. Current vs. Keeping Docs Updated
+
+(This is literally the biggest pain in knowledge management.)
+
+18. Current vs. Updating SOPs After Product Changes
+
+RevOps and CS will send you love letters.
+
+19. Current vs. Not Updating Docs at All
+
+Shockingly common.
+
+20. Current vs. Hiring a Doc Manager
+
+This page prints money for you.
+
+ROI section:
+
+Hiring someone: $70k–$120k/yr
+
+Current: $99/mo seatless
+
+24/7, no burnout

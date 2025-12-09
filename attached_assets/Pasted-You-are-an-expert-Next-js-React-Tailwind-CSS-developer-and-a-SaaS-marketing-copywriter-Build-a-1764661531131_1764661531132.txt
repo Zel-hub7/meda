@@ -1,0 +1,93 @@
+You are an expert Next.js + React + Tailwind CSS developer and a SaaS marketing copywriter.
+
+Build a `/solutions` page for a B2B SaaS product called **Current**.
+
+Context:
+- Current is a self-updating knowledge base.
+- It ingests Slack, Zoom, and documents (Google Docs / Notion / Confluence).
+- It detects knowledge drift and suggests AI-powered updates to SOPs and internal documentation.
+- Target buyers: Ops, Customer Success, RevOps, Agencies, HR/Onboarding teams at mid-market SaaS and services companies.
+
+General requirements:
+- Use React + Tailwind CSS (no external UI libraries).
+- Export a default React component (e.g. `export default function SolutionsPage()`).
+- Assume this will live in a Next.js project (`/app/solutions/page.tsx` or `/pages/solutions.tsx`).
+- Focus on clean, enterprise-grade design (Linear / Notion / Glean vibes).
+- Responsive layout for mobile + desktop.
+
+Page structure:
+
+1) Hero section
+   - Full-width section at top.
+   - Headline: “Solutions for teams who can’t afford stale documentation.”
+   - Subheadline: One or two sentences explaining that Current helps different teams keep their knowledge accurate and in sync with how they actually work.
+   - Primary CTA button: “Get started free”
+   - Secondary CTA link: “Talk to us”
+   - Optional subtle text: “Built for ops, CS, RevOps, agencies, and HR.”
+
+2) Solutions overview grid
+   - A grid (2x3 or 3x2 on desktop, stacked on mobile) of solution cards for different personas:
+     - Ops Teams
+     - Customer Success
+     - RevOps
+     - Agencies & Services
+     - HR & Onboarding
+   - Each card should include:
+     - Title (e.g. “Ops Teams”)
+     - 1–2 sentence description of their pain and how Current helps (e.g. keeping SOPs and process docs aligned with fast-changing reality).
+     - 3 bullet points of specific benefits.
+     - A “Learn more” link or button that *would* go to a persona-specific page (e.g. `/solutions/ops`), but for now just uses a `#` placeholder.
+
+   Example copy themes:
+   - Ops Teams: prevent process drift, reduce errors, keep SOPs current.
+   - CS Teams: keep onboarding and playbooks in sync with what top reps actually do.
+   - RevOps: ensure GTM teams always have the latest processes and rules of engagement.
+   - Agencies: keep client playbooks and internal how-tos updated without manual cleanup.
+   - HR & Onboarding: ensure new hires always see the real, current way things are done.
+
+3) Deep-dive band (“Why teams choose Current”)
+   - A two-column section.
+   - Left column: short heading and 2–3 paragraphs on shared pains across these teams:
+     - Knowledge spread across Slack, Zoom, and random docs.
+     - Docs that go stale within weeks.
+     - Operational risk when people rely on outdated SOPs.
+   - Right column: a simple checklist or highlight list of cross-cutting benefits:
+     - “AI-powered drift detection”
+     - “Human-in-the-loop approvals”
+     - “Version history and diffs”
+     - “Works with your existing tools”
+   - Use Tailwind to style this as a clean content section with good spacing.
+
+4) Mini “solution stories” row
+   - A section with 3 horizontal cards (stacked on mobile) that each read like a mini-story:
+     - Example 1: “Ops team rolls out a new process across 4 regions without rewriting docs.”
+     - Example 2: “CS team updates onboarding journeys after product changes — without hunting through Notion.”
+     - Example 3: “Agency standardizes client playbooks while processes change weekly.”
+   - Each card:
+     - A short bold heading (the scenario).
+     - 3–4 lines describing the before/after with Current.
+   - These are not real customers yet, just realistic narratives.
+
+5) Callout for mid-market & scaling teams
+   - A narrow band that explicitly calls out your ICP:
+     - “Designed for teams of 20–500 people who are growing fast and tired of stale documentation.”
+   - Include 3 small pill-style bullets:
+     - “Ops & CS led rollouts”
+     - “Works alongside Notion/Confluence”
+     - “Fast to pilot, easy to expand”
+
+6) Final CTA section
+   - Simple full-width section near the bottom.
+   - Headline: “See how Current fits your team.”
+   - Subheadline: Emphasize that in under 30 minutes they can see their own processes and docs start to sync.
+   - Buttons:
+     - Primary: “Get started free”
+     - Secondary: “Book a demo”
+
+Implementation notes:
+- Use Tailwind for layout, spacing, and typography (e.g. `max-w-6xl mx-auto px-4 py-16` patterns).
+- Use semantic HTML (`<main>`, `<section>`, `<h1>`/`<h2>`, `<p>`, `<ul>`, `<li>`).
+- Keep all copy focused on real business pains and ROI, not technical jargon.
+- Make sure the page looks polished and trustworthy enough for a mid-market buyer to show to their team.
+
+Return the complete React component code for this `/solutions` page.

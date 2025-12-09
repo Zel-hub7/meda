@@ -1,0 +1,14 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background rounded square - dark version -->
+  <rect width="512" height="512" rx="96" fill="#1E1E2E"/>
+  
+  <!-- Lightning bolt icon (Zap) -->
+  <path 
+    d="M288 96L160 272H240L224 416L352 240H272L288 96Z" 
+    fill="#6366F1" 
+    stroke="#6366F1" 
+    stroke-width="16" 
+    stroke-linecap="round" 
+    stroke-linejoin="round"
+  />
+</svg>
