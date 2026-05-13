@@ -1,5 +1,4 @@
 # Ticket #52 — Frontend Technical Proposal
-**Zelalem — Frontend Lead, Catalog/Ontology Pair**
 
 ---
 
