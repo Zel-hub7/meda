@@ -8,7 +8,7 @@ _Last updated: 2026-06-01_
 
 ---
 
-Hey @[QA name] — welcome to the QA side. Happy to get you up to speed on where the happy path stands.
+Hey  — welcome to the QA side. Happy to get you up to speed on where the happy path stands.
 
 ## The platform in one paragraph
 
