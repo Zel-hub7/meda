@@ -46,38 +46,55 @@ done
 
 If chrome-primitives 401s, your `NODE_AUTH_TOKEN` isn't exported in this shell.
 
-## 5. Ports (canonical, do not change them)
+## 5. Generate API clients (assessment + reports only — REQUIRED)
 
-The shell's `public/module-federation.manifest.json` hardcodes these in dev:
+`velocity-frontend-assessment` and `velocity-frontend-reports` ship with `codegen` scripts that hit the deployed BE's OpenAPI + GraphQL endpoints and write typed clients into `src/app/shared/api-generated/`. CI runs these between install and build — locally, you need them too or the build won't compile.
+
+```bash
+(cd velocity-frontend-assessment && pnpm run codegen:openapi && pnpm run codegen:graphql)
+(cd velocity-frontend-reports    && pnpm run codegen:graphql)
+```
+
+Network access required (calls `https://app-apxd-dev-tenant.azurewebsites.net/...` and the assessment OpenAPI URL). The shell and the iam remote don't need codegen.
+
+## 6. Ports — and the assessment trap
+
+The shell's `public/module-federation.manifest.json` hardcodes:
 
 - Shell (host): **4200** — what you open in browser
 - `iam` remote (velocity-frontend-auth): **4201**
 - `velocityFrontendAssessment`: **4202**
 - `velocityFrontendReports`: **4203**
 
+**TRAP:** `velocity-frontend-assessment`'s own `angular.json` defaults `ng serve` to **4200**, which collides with the shell. `velocity-frontend-auth` and `velocity-frontend-reports` have their ports correctly defaulted (4201 / 4203) in their angular.json. Only **assessment** needs the port override on every `pnpm start`.
+
 If any remote runs on the wrong port, the shell silently 404s when you navigate to its routes.
 
-## 6. Start everything (4 terminals)
+## 7. Start everything (4 terminals)
+
+Use `--` to pass flags through pnpm cleanly. Order matters: remotes first, shell last (the shell fetches `remoteEntry.js` from each remote at boot).
 
 ```bash
-# Terminal 1 — iam remote (auth screens)
-cd velocity-frontend-auth && pnpm start --port 4201
+# Terminal 1 — iam remote (auth screens) — defaults to 4201, no override needed
+cd velocity-frontend-auth && pnpm start
 
-# Terminal 2 — assessment remote (Quick Invite, take-flow, My Tasks)
-cd velocity-frontend-assessment && pnpm start --port 4202
+# Terminal 2 — assessment remote — MUST override the 4200 default
+cd velocity-frontend-assessment && pnpm start -- --port 4202
 
-# Terminal 3 — reports remote
-cd velocity-frontend-reports && pnpm start --port 4203
+# Terminal 3 — reports remote — defaults to 4203, no override needed
+cd velocity-frontend-reports && pnpm start
 
-# Terminal 4 — SHELL (last)
+# Terminal 4 — SHELL (start LAST)
 cd velocity-frontend-identity && pnpm start
 ```
 
-Start the remotes BEFORE the shell. Each takes ~20-30s for first compile. Shell's first compile + remote-entry fetches takes another 20s.
+Each remote takes ~20–30s for first compile. Shell's first compile + remote-entry fetches takes another 20s.
 
 Open http://localhost:4200 in a Chrome incognito window.
 
-## 7. Backend — you don't need to run BE locally
+**Don't use `pnpm run:all`** — that script exists in every repo's `package.json` but it's the `@angular-architects/module-federation` workspace-level dev server. It assumes all remotes live in the same workspace (sibling Angular projects). Since our repos are separate, the cross-repo case needs the 4-terminal approach above.
+
+## 8. Backend — you don't need to run BE locally
 
 The shell's `proxy.conf.cjs` proxies `/api/*` to **`https://app-apxd-dev-backend.azurewebsites.net`** (deployed dev). So:
 
@@ -91,7 +108,11 @@ Translation: when you log in locally, you're logging into the SAME dev DB as eve
 - Participant: `e2e.participant@example.com` / `E2ePart1234!`
 - Or Zola's `active.user@example.com` (password in his password manager — ping him)
 
-## 8. Common errors and fixes
+### Tenant GraphQL is NOT proxied
+
+`env.tenantGraphqlUrl` is called direct from the browser to `https://app-apxd-dev-tenant.azurewebsites.net/graphql/`, not through `/api/*`. That's a real cross-origin call. The Tenant service's CORS allowlist needs to include your origin (`localhost:4200` or the `lencora.host` alias — see §10). Tenant CORS was switched to a credentialed allowlist in `velocity-backend-tenant#13`; if your origin isn't on the list, `myCapabilities` and `tenantBranding` will fail with `withCredentials` errors.
+
+## 9. Common errors and fixes
 
 **`ERR_PNPM_FETCH_401` on `@apexdynamics/chrome-primitives`**
 → `NODE_AUTH_TOKEN` not exported in your shell. Re-export and re-run `pnpm install`.
@@ -117,7 +138,7 @@ Translation: when you log in locally, you're logging into the SAME dev DB as eve
 **Login succeeds but you land on a blank/temporary scaffold page**
 → This is the temp scaffold home; the role-aware redirect (shell PR #77) sends you to `/assessment/quick-invite` (admin) or `/assessment/tasks` (participant). If you stay on the scaffold, `activeRoles()` hasn't hydrated — check DevTools Network for `/me/context`.
 
-## 9. Where to look when something breaks
+## 10. Where to look when something breaks
 
 - **Module Federation manifest:** `public/module-federation.manifest.json` (the 4200-4203 mapping)
 - **Webpack MF config:** `webpack.config.js` at shell root (defines remotes + shared singletons)
@@ -125,11 +146,11 @@ Translation: when you log in locally, you're logging into the SAME dev DB as eve
 - **Env config:** `src/environments/environment.ts` (local dev) vs `environment.production.ts` (CI build)
 - **Allowed hosts:** `angular.json` → `projects.shell.architect.serve.options.allowedHosts`
 
-## 10. If you only need to debug ONE issue and the full stack is overkill
+## 11. If you only need to debug ONE issue and the full stack is overkill
 
 You can run JUST the shell against the **deployed remotes** by editing `public/module-federation.manifest.json` to point at the production URLs (not localhost). The values are in the template file (`public/module-federation.manifest.json.template`) — copy the deployed URLs from `https://app.dev.velocityadmin.io/module-federation.manifest.json`. **Don't commit that change**; it's a personal dev shortcut.
 
-## 11. Why the README in `velocity-frontend-identity` is misleading
+## 12. Why the README in `velocity-frontend-identity` is misleading
 
 The repo's `README.md` was written when the shell was a hello-world scaffold (Angular 20, `npm install`, no remotes). Don't follow it. The current stack is Angular 21, pnpm, full MF host with 3 remotes — this guide is the source of truth until the README catches up.
 
